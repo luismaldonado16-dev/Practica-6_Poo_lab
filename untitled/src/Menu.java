@@ -9,7 +9,7 @@ public class Menu {
     }
 
     public int preguntarMazos(){
-        System.out.println("Con cuantos mazos desea jugar?");
+        System.out.println("\nCon cuantos mazos desea jugar?");
         System.out.println("[1] 1 Mazo.");
         System.out.println("[2] 2 Mazos.");
         System.out.println("[3] 3 Mazos.");
@@ -29,6 +29,16 @@ public class Menu {
         System.out.println("Que deseas hacer?");
         System.out.println("[1] Plantarse");
         System.out.println("[2] Tomar Carta");
+        if(scn.hasNext()){
+            this.opc = scn.nextInt();
+        }
+        return opc;
+    }
+
+    public int deseasVolverAJugar(){
+        System.out.println("\nDeseas volver a jugar?");
+        System.out.println("[1] Si");
+        System.out.println("[2] No");
         if(scn.hasNext()){
             this.opc = scn.nextInt();
         }
