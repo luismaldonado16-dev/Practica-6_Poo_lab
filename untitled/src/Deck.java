@@ -51,21 +51,15 @@ public class Deck {
             }
         }
 
-        Collections.shuffle(deck);
+        for(int i = 0;i < 3; i++) {
+            Collections.shuffle(deck);
+        }
     }
 
     public void imprimirCartas(){
-        int i = 1;
         for(Card card : deck)
         {
             System.out.println(card.cartaCompleta());
-            if(i % 13 == 0){
-                System.out.println("\n\n");
-                if(i % 52 == 0){
-                    System.out.println("\n\n");
-                }
-            }
-            i++;
         }
         System.out.println("Se imprimieron " + deck.size() + " cartas.");
 
@@ -76,15 +70,5 @@ public class Deck {
         deck.removeFirst();
         return cartaDar;
     }
-
-    public ArrayList<Card> recogerVariasCartas(int cuantasCartasQuiere){
-
-        ArrayList<Card> variasCartas = new ArrayList<>();
-        for(int i = 0; i < cuantasCartasQuiere; i++){
-            variasCartas.add(darCarta());
-        }
-        return variasCartas;
-    }
-
 
 }

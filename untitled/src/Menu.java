@@ -24,4 +24,14 @@ public class Menu {
         }
         return opc;
     }
+
+    public int preguntarTomarCarta(){
+        System.out.println("Que deseas hacer?");
+        System.out.println("[1] Plantarse");
+        System.out.println("[2] Tomar Carta");
+        if(scn.hasNext()){
+            this.opc = scn.nextInt();
+        }
+        return opc;
+    }
 }
